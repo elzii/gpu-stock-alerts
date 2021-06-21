@@ -1,0 +1,6 @@
+#+TITLE: GPU Stock Tracker
+
+
+WIP
+
+Using Best Buy to test
