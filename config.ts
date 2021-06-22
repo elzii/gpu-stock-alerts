@@ -7,8 +7,8 @@ export enum Vendors {
   BH = "BH",
   CRAIGSLIST = "CRAIGSLIST"
 }
-type VendorsKeys = keyof typeof Vendors;
-type VendorsKeyFields = {[key in VendorsKeys]:UrlsByModel}
+export type VendorsKeys = keyof typeof Vendors;
+export type VendorsKeyFields = {[key in VendorsKeys]:UrlsByModel}
 
 export enum GPUModels {
   RTX_3080 = 'RTX_3080',
@@ -18,8 +18,8 @@ export enum GPUModels {
   SEARCH = "SEARCH"
   // TEST = 'TEST'
 }
-type GPUModelsKeys = keyof typeof GPUModels;
-type GPUModelsKeyFields = {[key in GPUModelsKeys]:string}
+export type GPUModelsKeys = keyof typeof GPUModels;
+export type GPUModelsKeyFields = {[key in GPUModelsKeys]:string}
 
 export interface UrlsByModel extends GPUModelsKeyFields {
   [key: string]: string
@@ -46,9 +46,6 @@ export const URLS_BY_MODEL_BH: UrlsByModel = {
   [GPUModels.SEARCH]: '',
 }
 
-
-
-
 export const URLS_BY_MULTISEARCH_CRAIGSLIST: UrlsByModel = {
   [GPUModels.RTX_3080]: '',
   [GPUModels.RTX_3070]: '',
@@ -62,7 +59,6 @@ export const URLS_BY_MULTISEARCH_CRAIGSLIST: UrlsByModel = {
     sort: 'rel',
   })
 }
-
 
 export const URLS_BY_VENDOR: UrlsByVendor = {
   [Vendors.BESTBUY]: URLS_BY_MODEL_BESTBUY,
